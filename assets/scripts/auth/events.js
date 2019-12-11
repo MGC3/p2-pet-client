@@ -42,7 +42,6 @@ const onChangePassword = e => {
 
 const onSignOut = e => {
   e.preventDefault();
-
   api
     .signOut()
     .then(ui.onSignOutSuccess)
@@ -52,8 +51,8 @@ const onSignOut = e => {
 const addHandlers = e => {
   $("#sign-up").on("submit", onSignUp);
   $("#sign-in").on("submit", onSignIn);
-  $("#change-password").on("submit", onChangePassword);
-  $("#sign-out").on("submit", onSignOut);
+  $("#app").on("submit", "#change-password", onChangePassword);
+  $("#app").on("submit", "#sign-out", onSignOut);
 };
 
 module.exports = {

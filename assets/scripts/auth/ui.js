@@ -1,6 +1,8 @@
 "use strict";
 
 const store = require("../store");
+const userHome = require("../templates/UserHome.handlebars");
+const landing = require("../templates/Landing.handlebars");
 
 const onSuccess = message => {
   $("#message")
@@ -20,38 +22,53 @@ const onFailure = message => {
 };
 
 const onSignupSuccess = () => {
-  onSuccess("Sucessfully signed up");
+  // FIXME: better messaging
+  console.warn("Sucessfully signed up");
+  // onSuccess("Sucessfully signed up");
 };
 
 const onSignupFailure = () => {
-  onFailure("ERROR ERROR - sign up");
+  // FIXME: better messaging
+  console.warn("ERROR ERROR - sign up");
+  // onFailure("ERROR ERROR - sign up");
 };
 
 const onSigninSuccess = responseData => {
   store.user = responseData.user;
   console.log(store);
-  onSuccess("Sucessfully signed in");
-  $(".after-auth").show();
-  $(".before-auth").hide();
+  // FIXME: better messaging
+  // onSuccess("Sucessfully signed in");
+  loadUserHome();
+};
+
+const loadUserHome = () => {
+  $("#app").html(userHome);
 };
 
 const onSigninFailure = () => {
-  onFailure("ERROR ERROR - sign in");
+  // FIXME: better messaging
+  console.warn("ERROR ERROR - sign in");
+  // onFailure("ERROR ERROR - sign in");
 };
 
 const onChangePasswordSuccess = responseData => {
-  onSuccess("Sucessfully changed password");
+  // FIXME: better messaging
+  console.warn("Sucessfully changed password");
+  // onSuccess("Sucessfully changed password");
 };
 
 const onChangePasswordFailure = () => {
-  onFailure("ERROR ERROR - change password");
+  // FIXME: better messaging
+  console.warn("ERROR ERROR - change password");
+  // onFailure("ERROR ERROR - change password");
 };
 
 const onSignOutSuccess = () => {
   onSuccess("Sucessfully Signed Out");
   store.user = {}; // the store no longer knows who we are
-  $(".after-auth").hide();
-  $(".before-auth").show();
+  // FIXME: clear stuff, load landing page again
+  console.warn("Signed out");
+  $("#app").html(landing);
 };
 
 const onSignOutFailure = () => {
