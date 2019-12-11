@@ -2,4 +2,9 @@
 {{> SignOut}}
 <div class="home__container">
   <button class="btn btn-primary pet-form__btn">Go to new pet form</button>
+
+  {{#each pets as |pet|}}
+  <h1>Pet name is: {{pet.name}}</h1>
+  <h1>Pet ID is: {{pet.id}}</h1>
+  {{/each}}
 </div>

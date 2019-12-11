@@ -1,8 +1,9 @@
 "use strict";
 
 const store = require("../store");
-const userHome = require("../templates/UserHome.handlebars");
+// const userHome = require("../templates/UserHome.handlebars");
 const landing = require("../templates/Landing.handlebars");
+const commonEvents = require("../common/events");
 
 const onSuccess = message => {
   $("#message")
@@ -38,7 +39,7 @@ const onSigninSuccess = responseData => {
   console.log(store);
   // FIXME: better messaging
   // onSuccess("Sucessfully signed in");
-  loadUserHome();
+  commonEvents.onGetUserHome();
 };
 
 const loadUserHome = () => {
