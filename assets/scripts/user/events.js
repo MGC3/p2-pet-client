@@ -14,14 +14,9 @@ const onClickPetShowButton = e => {
     .catch(ui.failure);
 };
 
-const onClickTestGet = () => {
-  api.testGet().then(data => console.log(data));
-};
-
 const addHandlers = () => {
   $("#app").on("click", ".pet-form__btn", onClickPetFormButton);
   $("#app").on("click", ".pet-show__btn", onClickPetShowButton);
-  $("#app").on("click", ".test-get-one", onClickTestGet);
 };
 
 module.exports = {
