@@ -5,6 +5,11 @@ const getFormFields = require("../../../lib/get-form-fields");
 const onDeletePet = e => {
   const id = $(e.target).data("id");
   console.warn("You are deleting pet with id: ", id);
+  api
+    .deletePet(id)
+    .then(ui.onDeletePetSuccess)
+    // FIXME: make sure catch works
+    .catch(ui.failure);
 };
 
 const onUpdatePetName = e => {
