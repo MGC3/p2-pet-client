@@ -5,10 +5,8 @@ const onDeletePetSuccess = () => {
 };
 
 const onUpdatePetNameSuccess = data => {
-  console.warn(
-    "Update name success! This is the ID I got back - if this is correct, send to refresh show pet: ",
-    data.pet.id
-  );
+  const id = data.pet.id;
+  commonEvents.onGetPetShow(id);
 };
 
 module.exports = {
