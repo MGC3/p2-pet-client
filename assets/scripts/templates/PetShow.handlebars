@@ -1,2 +1,7 @@
 <h1>I am Pet Show Component for PETNAME: {{pet.name}} PETID: {{pet.id}}</h1>
 <button data-id="{{pet.id}}" class="btn btn-danger pet-delete__btn">Delete this pet</button>
+<form data-id="{{pet.id}}" action="" id="update-pet-name">
+  <label for="update-name">Enter new name</label>
+  <input name="pet[name]" id="update-name" type="text" placeholder="Enter new name" />
+  <button class="btn btn-primary">Update name</button>
+</form>
