@@ -1,6 +1,7 @@
 "use strict";
-const authEvents = require("./auth/events");
 const common = require("./common/ui");
+const authEvents = require("./auth/events");
+const userEvents = require("./user/events");
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -11,4 +12,5 @@ const common = require("./common/ui");
 $(() => {
   common.init();
   authEvents.addHandlers();
+  userEvents.addHandlers();
 });
