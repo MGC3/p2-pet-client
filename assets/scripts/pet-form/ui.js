@@ -1,13 +1,7 @@
-const userHome = require("../templates/UserHome.handlebars");
-
-// TODO: Refactor later - loadUserHome duplicated in auth stuff
-const loadUserHome = () => {
-  $("#app").html(userHome);
-};
+const commonEvents = require("../common/events");
 
 const addPetSuccess = () => {
-  // send send user back to user home page TODO: and pass in api data
-  loadUserHome();
+  commonEvents.onGetUserHome();
 };
 
 const addPetFailure = () => {

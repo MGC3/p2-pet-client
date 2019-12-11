@@ -42,10 +42,6 @@ const onSigninSuccess = responseData => {
   commonEvents.onGetUserHome();
 };
 
-const loadUserHome = () => {
-  $("#app").html(userHome);
-};
-
 const onSigninFailure = () => {
   // FIXME: better messaging
   console.warn("ERROR ERROR - sign in");
