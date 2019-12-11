@@ -4,7 +4,6 @@ const getFormFields = require("../../../lib/get-form-fields");
 
 const onDeletePet = e => {
   const id = $(e.target).data("id");
-  console.warn("You are deleting pet with id: ", id);
   api
     .deletePet(id)
     .then(ui.onDeletePetSuccess)
@@ -15,7 +14,14 @@ const onDeletePet = e => {
 const onUpdatePetName = e => {
   e.preventDefault();
   const id = $(e.target).data("id");
-  console.warn("You are updating pet with id: ", id);
+  const form = e.target;
+  const formData = getFormFields(form);
+
+  api
+    .updatePetName(id, formData)
+    .then(data => ui.onUpdatePetNameSuccess(data))
+    // FIXME: make sure catch works
+    .catch(ui.failure);
 };
 
 const addHandlers = () => {

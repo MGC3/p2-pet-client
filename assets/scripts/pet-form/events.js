@@ -7,7 +7,6 @@ const onCreatePet = e => {
   // send api request to add pet
   const form = e.target;
   const addNewPetData = getFormFields(form);
-  console.warn(addNewPetData);
   api
     .add(addNewPetData)
     .then(ui.addPetSuccess)

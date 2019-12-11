@@ -11,6 +11,18 @@ const deletePet = id => {
   });
 };
 
+const updatePetName = (id, formData) => {
+  return $.ajax({
+    url: config.apiUrl + "/pets/" + id,
+    method: "PATCH",
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: formData
+  });
+};
+
 module.exports = {
-  deletePet
+  deletePet,
+  updatePetName
 };
