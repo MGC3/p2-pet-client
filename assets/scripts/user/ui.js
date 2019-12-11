@@ -1,13 +1,16 @@
 const petForm = require("../templates/PetForm.handlebars");
+const petShow = require("../templates/PetShow.handlebars");
 
 const loadPetForm = () => {
   $("#app").html(petForm);
 };
 
-const loadPetShow = () => {
-  console.warn("Pet show was clikced");
+const getPetSuccess = data => {
+  console.warn(data);
+  const petShowHtml = petShow({ pet: data.pet });
+  $("#app").html(petShowHtml);
 };
 module.exports = {
   loadPetForm,
-  loadPetShow
+  getPetSuccess
 };

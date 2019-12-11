@@ -2,10 +2,10 @@
 {{> SignOut}}
 <div class="home__container">
   <button class="btn btn-primary pet-form__btn">Go to new pet form</button>
-
+  <button class='btn btn-danger test-get-one'>TEST GET /1</button>
   {{#each pets as |pet|}}
   <h1>Pet name is: {{pet.name}}</h1>
   <h1>Pet ID is: {{pet.id}}</h1>
-  <button class='btn btn-primary pet-show__btn'>Go to my {{pet.name}}'s page</button>
+  <button data-id="{{pet.id}}" class='btn btn-primary pet-show__btn'>Go to my {{pet.name}}'s page</button>
   {{/each}}
 </div>

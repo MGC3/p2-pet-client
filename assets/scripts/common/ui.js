@@ -7,7 +7,6 @@ const init = () => {
 };
 
 const getUserHomeSuccess = data => {
-  console.warn(data);
   const userHomeHtml = userHome({ pets: data.pets });
   $("#app").html(userHomeHtml);
 };
