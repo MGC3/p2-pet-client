@@ -1,17 +1,17 @@
-'use strict'
+"use strict";
 
-let apiUrl
+let apiUrl;
 const apiUrls = {
-  production: '<replace-with-heroku-url>',
-  development: 'http://localhost:4741'
-}
+  production: "https://stormy-mountain-79732.herokuapp.com",
+  development: "http://localhost:4741"
+};
 
-if (window.location.hostname === 'localhost') {
-  apiUrl = apiUrls.development
+if (window.location.hostname === "localhost") {
+  apiUrl = apiUrls.development;
 } else {
-  apiUrl = apiUrls.production
+  apiUrl = apiUrls.production;
 }
 
 module.exports = {
   apiUrl
-}
+};
