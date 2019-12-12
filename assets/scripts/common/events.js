@@ -2,12 +2,12 @@ const api = require("./api");
 const ui = require("./ui");
 const userApi = require("../user/api");
 const userUi = require("../user/ui");
+const commonUi = require("../common/ui");
 
 const onGetUserHome = () => {
   api
     .getUserHome()
-    .then(ui.getUserHomeSuccess)
-    // FIXME: make sure catch works
+    .then(commonUi.notification("Error refreshing user home page", "failure"))
     .catch(ui.failure);
 };
 
@@ -16,8 +16,7 @@ const onGetPetShow = id => {
   userApi
     .getPet(id)
     .then(data => userUi.getPetSuccess(data))
-    // FIXME: make sure catch works
-    .catch(ui.failure);
+    .catch(commonUi.notification("Error showing pet page", "failure"));
 };
 
 module.exports = {

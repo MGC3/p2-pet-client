@@ -1,5 +1,6 @@
 const ui = require("./ui");
 const api = require("./api");
+const commonUi = require("../common/ui");
 const getFormFields = require("../../../lib/get-form-fields");
 
 const onDeletePet = e => {
@@ -7,8 +8,7 @@ const onDeletePet = e => {
   api
     .deletePet(id)
     .then(ui.onDeletePetSuccess)
-    // FIXME: make sure catch works
-    .catch(ui.failure);
+    .catch(commonUi.notification("Error deleting pet", "failure"));
 };
 
 const onUpdatePetName = e => {
@@ -20,8 +20,7 @@ const onUpdatePetName = e => {
   api
     .updatePetName(id, formData)
     .then(data => ui.onUpdatePetNameSuccess(data))
-    // FIXME: make sure catch works
-    .catch(ui.failure);
+    .catch(commonUi.notification("Error updating pet", "failure"));
 };
 
 const addHandlers = () => {

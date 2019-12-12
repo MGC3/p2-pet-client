@@ -1,12 +1,12 @@
 const commonEvents = require("../common/events");
+const commonUi = require("../common/ui");
 
 const addPetSuccess = () => {
   commonEvents.onGetUserHome();
 };
 
 const addPetFailure = () => {
-  // FIXME: better messaging
-  console.warn("Failed to add pet");
+  commonUi.notification("Error adding pet", "failure");
 };
 
 module.exports = {
