@@ -6,16 +6,15 @@
   <button class="btn btn-primary">Update name</button>
 </form>
 <h1>Weight</h1>
-<form action="" id="weight-create">
-  <input type="number" min="0.01" step=".01" name="weightlog[amount]" placeholder="weight" />
-  <input type="date" name="weightlog[date]" />
+<form data-id="{{pet.id}}" action="" id="weight-create">
+  <input type="number" min="0.01" step=".01" name="weightlog[amount]" placeholder="weight" required />
+  <input type="date" name="weightlog[date]" required />
   <input class="btn btn-primary" type="submit" value="Create Weightlog" />
 </form>
 <div class="weight-list__container">
   <ul class="weight-list">
-    <li>Test</li>
-    <li>Test</li>
-    <li>Test</li>
-    <li>Test</li>
+    {{#each pet.weightlogs as |weightlog|}}
+    <li>{{weightlog.weight}}</li>
+    {{/each}}
   </ul>
 </div>

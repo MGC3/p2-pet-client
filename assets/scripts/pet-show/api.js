@@ -22,7 +22,19 @@ const updatePetName = (id, formData) => {
   });
 };
 
+const addWeightLog = formDataId => {
+  return $.ajax({
+    url: config.apiUrl + "/weightlogs/",
+    method: "POST",
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: formDataId
+  });
+};
+
 module.exports = {
   deletePet,
-  updatePetName
+  updatePetName,
+  addWeightLog
 };

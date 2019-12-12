@@ -11,7 +11,13 @@ const onUpdatePetNameSuccess = data => {
   commonEvents.onGetPetShow(id);
 };
 
+const onCreateWeightSuccess = id => {
+  $("form").trigger("reset");
+  commonEvents.onGetPetShow(id);
+};
+
 module.exports = {
   onDeletePetSuccess,
-  onUpdatePetNameSuccess
+  onUpdatePetNameSuccess,
+  onCreateWeightSuccess
 };

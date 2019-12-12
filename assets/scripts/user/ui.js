@@ -7,6 +7,7 @@ const loadPetForm = () => {
 };
 
 const getPetSuccess = data => {
+  console.warn("Data from getPetSuccess", data);
   const petShowHtml = petShow({ pet: data.pet });
   $("#app").html(petShowHtml);
 };
