@@ -20,20 +20,24 @@ const onSigninSuccess = responseData => {
 };
 
 const onSigninFailure = () => {
+  $("form").trigger("reset");
   commonUi.notification("Error signing in", "failure");
 };
 
 const onChangePasswordSuccess = responseData => {
+  $("form").trigger("reset");
   commonUi.notification("Successfully changed password", "success");
 };
 
 const onChangePasswordFailure = () => {
+  $("form").trigger("reset");
   commonUi.notification("Error changing password", "failure");
 };
 
 const onSignOutSuccess = () => {
   store.user = {}; // the store no longer knows who we are
-  // FIXME: clear stuff, load landing page again
+  // TODO: check if need to clear anything else
+  $("form").trigger("reset");
   $("#app").html(landing);
 };
 

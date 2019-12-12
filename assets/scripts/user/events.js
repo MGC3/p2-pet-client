@@ -10,8 +10,7 @@ const onClickPetShowButton = e => {
   api
     .getPet(id)
     .then(data => ui.getPetSuccess(data))
-    // FIXME: make sure catch works
-    .catch(ui.failure);
+    .catch(ui.getPetFailure());
 };
 
 const addHandlers = () => {
