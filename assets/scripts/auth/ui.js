@@ -32,7 +32,6 @@ const onChangePasswordFailure = () => {
 };
 
 const onSignOutSuccess = () => {
-  onSuccess("Sucessfully Signed Out");
   store.user = {}; // the store no longer knows who we are
   // FIXME: clear stuff, load landing page again
   $("#app").html(landing);

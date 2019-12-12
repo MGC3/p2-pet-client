@@ -7,8 +7,8 @@ const commonUi = require("../common/ui");
 const onGetUserHome = () => {
   api
     .getUserHome()
-    .then(commonUi.notification("Error refreshing user home page", "failure"))
-    .catch(ui.failure);
+    .then(ui.getUserHomeSuccess)
+    .catch(commonUi.notification("Error refreshing user home page", "failure"));
 };
 
 const onGetPetShow = id => {
