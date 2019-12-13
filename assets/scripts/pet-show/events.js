@@ -72,9 +72,6 @@ const onUpdatePetWeight = e => {
       pet_id: petId
     }
   };
-  console.warn("formdata: ", formDataId);
-  console.warn("weightlogId:", weightlogId);
-  console.warn("Petid: ", petId);
 
   api
     .updateWeight(weightlogId, formDataId)
