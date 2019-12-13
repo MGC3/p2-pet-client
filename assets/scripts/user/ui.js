@@ -13,7 +13,10 @@ const getPetSuccess = data => {
   data.pet.weightlogs.sort((a, b) => (a.date < b.date ? 1 : -1));
   const petShowHtml = petShow({ pet: data.pet });
   $("#app").html(petShowHtml);
-  petChart.drawChart();
+  const weights = data.pet.weightlogs.map(i => i.weight).reverse();
+  const dates = data.pet.weightlogs.map(i => i.date).reverse();
+
+  petChart.drawChart(weights, dates);
 };
 
 const getPetFailure = () => {

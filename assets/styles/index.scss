@@ -1,1 +1,6 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+.pet-weight-chart__container {
+  width: 600px;
+  height: 400px;
+}
