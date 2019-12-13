@@ -8,7 +8,9 @@ const onGetUserHome = () => {
   api
     .getUserHome()
     .then(ui.getUserHomeSuccess)
-    .catch(commonUi.notification("Error refreshing user home page", "failure"));
+    .catch(() =>
+      commonUi.notification("Error refreshing user home page", "failure")
+    );
 };
 
 const onGetPetShow = id => {
@@ -16,7 +18,7 @@ const onGetPetShow = id => {
   userApi
     .getPet(id)
     .then(data => userUi.getPetSuccess(data))
-    .catch(commonUi.notification("Error showing pet page", "failure"));
+    .catch(() => commonUi.notification("Error showing pet page", "failure"));
 };
 
 module.exports = {
