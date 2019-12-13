@@ -8,7 +8,7 @@ const onDeletePet = e => {
   api
     .deletePet(id)
     .then(ui.onDeletePetSuccess)
-    .catch(commonUi.notification("Error deleting pet", "failure"));
+    .catch(() => commonUi.notification("Error deleting pet", "failure"));
 };
 
 const onUpdatePetName = e => {
@@ -19,7 +19,7 @@ const onUpdatePetName = e => {
   api
     .updatePetName(id, formData)
     .then(data => ui.onUpdatePetNameSuccess(data))
-    .catch(commonUi.notification("Error updating pet", "failure"));
+    .catch(() => commonUi.notification("Error updating pet", "failure"));
 };
 
 const onCreateWeight = e => {
@@ -37,7 +37,7 @@ const onCreateWeight = e => {
   api
     .addWeightLog(formDataId)
     .then(() => ui.onCreateWeightSuccess(id))
-    .catch(commonUi.notification("Error creating weight", "failure"));
+    .catch(() => commonUi.notification("Error creating weight", "failure"));
 };
 
 const onDeleteWeight = e => {
@@ -53,7 +53,7 @@ const onDeleteWeight = e => {
   api
     .deleteWeight(queryString)
     .then(() => ui.onDeleteWeightSuccess(petId))
-    .catch(commonUi.notification("Error deleting weight", "failure"));
+    .catch(() => commonUi.notification("Error deleting weight", "failure"));
 };
 
 const addHandlers = () => {

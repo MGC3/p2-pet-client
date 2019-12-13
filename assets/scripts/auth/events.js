@@ -13,7 +13,7 @@ const onSignUp = e => {
   api
     .signUp(formData)
     .then(ui.onSignupSuccess)
-    .catch(ui.onSignupFailure);
+    .catch(() => ui.onSignupFailure());
 };
 
 const onSignIn = e => {
@@ -25,7 +25,7 @@ const onSignIn = e => {
   api
     .signIn(formData)
     .then(ui.onSigninSuccess)
-    .catch(ui.onSigninFailure);
+    .catch(() => ui.onSigninFailure());
 };
 
 const onChangePassword = e => {
@@ -37,7 +37,7 @@ const onChangePassword = e => {
   api
     .changePassword(formData)
     .then(ui.onChangePasswordSuccess)
-    .catch(ui.onChangePasswordFailure);
+    .catch(() => ui.onChangePasswordFailure());
 };
 
 const onSignOut = e => {
@@ -45,7 +45,7 @@ const onSignOut = e => {
   api
     .signOut()
     .then(ui.onSignOutSuccess)
-    .catch(ui.onSignOutFailure);
+    .catch(() => ui.onSignOutFailure());
 };
 
 const addHandlers = e => {

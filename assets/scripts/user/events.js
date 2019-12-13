@@ -10,7 +10,7 @@ const onClickPetShowButton = e => {
   api
     .getPet(id)
     .then(data => ui.getPetSuccess(data))
-    .catch(ui.getPetFailure());
+    .catch(() => ui.getPetFailure());
 };
 
 const addHandlers = () => {
