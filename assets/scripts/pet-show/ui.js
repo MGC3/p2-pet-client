@@ -21,9 +21,15 @@ const onDeleteWeightSuccess = id => {
   commonEvents.onGetPetShow(id);
 };
 
+const onUpdateWeightSuccess = id => {
+  $("form").trigger("reset");
+  commonEvents.onGetPetShow(id);
+};
+
 module.exports = {
   onDeletePetSuccess,
   onUpdatePetNameSuccess,
   onCreateWeightSuccess,
-  onDeleteWeightSuccess
+  onDeleteWeightSuccess,
+  onUpdateWeightSuccess
 };

@@ -16,6 +16,12 @@
     {{#each pet.weightlogs as |weightlog|}}
     <li>WEIGHT: {{weightlog.weight}} DATE: {{weightlog.date}}<button data-id="{{weightlog.id}}"
         class="btn btn-danger weight-delete__btn">Delete</button>
+      <form data-id="{{weightlog.id}}" action="" id="update-pet-weight">
+        <input name="weightlog[amount]" id="update-weight" type="number" step="0.1" value={{weightlog.weight}}
+          required />
+        <input type="date" name="weightlog[date]" value={{weightlog.date}} required />
+        <button type='submit' class="btn btn-primary">Update</button>
+      </form>
     </li>
     {{/each}}
   </ul>

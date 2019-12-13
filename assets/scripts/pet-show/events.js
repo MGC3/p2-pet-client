@@ -56,11 +56,38 @@ const onDeleteWeight = e => {
     .catch(() => commonUi.notification("Error deleting weight", "failure"));
 };
 
+const onUpdatePetWeight = e => {
+  e.preventDefault();
+  const weightlogId = $(e.target).data("id");
+  const form = e.target;
+  const formData = getFormFields(form);
+  const petId = $(e.target)
+    .parent()
+    .parent()
+    .data("pet");
+  const formDataId = {
+    weightlog: {
+      weight: formData.weightlog.amount,
+      date: formData.weightlog.date,
+      pet_id: petId
+    }
+  };
+  console.warn("formdata: ", formDataId);
+  console.warn("weightlogId:", weightlogId);
+  console.warn("Petid: ", petId);
+
+  api
+    .updateWeight(weightlogId, formDataId)
+    .then(() => ui.onUpdateWeightSuccess(petId))
+    .catch(() => commonUi.notification("Error updating weight", "failure"));
+};
+
 const addHandlers = () => {
   $("#app").on("click", ".pet-delete__btn", onDeletePet);
   $("#app").on("submit", "#update-pet-name", onUpdatePetName);
   $("#app").on("submit", "#weight-create", onCreateWeight);
   $("#app").on("click", ".weight-delete__btn", onDeleteWeight);
+  $("#app").on("submit", "#update-pet-weight", onUpdatePetWeight);
 };
 
 module.exports = {
