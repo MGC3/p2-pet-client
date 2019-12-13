@@ -33,8 +33,19 @@ const addWeightLog = formDataId => {
   });
 };
 
+const deleteWeight = queryString => {
+  return $.ajax({
+    url: config.apiUrl + "/weightlogs/" + queryString,
+    method: "DELETE",
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  });
+};
+
 module.exports = {
   deletePet,
   updatePetName,
-  addWeightLog
+  addWeightLog,
+  deleteWeight
 };

@@ -16,7 +16,6 @@ const onUpdatePetName = e => {
   const id = $(e.target).data("id");
   const form = e.target;
   const formData = getFormFields(form);
-  console.count();
   api
     .updatePetName(id, formData)
     .then(data => ui.onUpdatePetNameSuccess(data))
@@ -41,10 +40,27 @@ const onCreateWeight = e => {
     .catch(commonUi.notification("Error creating weight", "failure"));
 };
 
+const onDeleteWeight = e => {
+  e.preventDefault();
+  const weightlogId = $(e.target).data("id");
+  // TODO: i mean, this works...but
+  const petId = $(e.target)
+    .parent()
+    .parent()
+    .data("pet");
+
+  const queryString = `${weightlogId}?pet_id=${petId}`;
+  api
+    .deleteWeight(queryString)
+    .then(() => ui.onDeleteWeightSuccess(petId))
+    .catch(commonUi.notification("Error deleting weight", "failure"));
+};
+
 const addHandlers = () => {
   $("#app").on("click", ".pet-delete__btn", onDeletePet);
   $("#app").on("submit", "#update-pet-name", onUpdatePetName);
   $("#app").on("submit", "#weight-create", onCreateWeight);
+  $("#app").on("click", ".weight-delete__btn", onDeleteWeight);
 };
 
 module.exports = {

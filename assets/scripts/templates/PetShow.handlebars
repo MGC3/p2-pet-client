@@ -12,9 +12,11 @@
   <input class="btn btn-primary" type="submit" value="Create Weightlog" />
 </form>
 <div class="weight-list__container">
-  <ul class="weight-list">
+  <ul data-pet='{{pet.id}}' class="weight-list">
     {{#each pet.weightlogs as |weightlog|}}
-    <li>{{weightlog.weight}}</li>
+    <li>WEIGHT: {{weightlog.weight}} DATE: {{weightlog.date}}<button data-id="{{weightlog.id}}"
+        class="btn btn-danger weight-delete__btn">Delete</button>
+    </li>
     {{/each}}
   </ul>
 </div>
