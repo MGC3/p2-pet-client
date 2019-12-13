@@ -4,7 +4,7 @@ const drawChart = (weights, dates) => {
   let myChart = new Chart(ctx, {
     type: "line",
     data: {
-      labels: weights,
+      labels: dates,
       datasets: [
         {
           label: "Weight",
