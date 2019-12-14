@@ -1,7 +1,6 @@
 "use strict";
 
 const store = require("../store");
-const landing = require("../templates/Landing.handlebars");
 const commonEvents = require("../common/events");
 const commonUi = require("../common/ui");
 
@@ -39,7 +38,8 @@ const onChangePasswordFailure = () => {
 const onSignOutSuccess = () => {
   store.user = {}; // the store no longer knows who we are
   // TODO: check if need to clear anything else
-  $("#app").html(landing);
+  // $("#app").html(landing);
+  commonUi.loadLanding();
 };
 
 const onSignOutFailure = () => {

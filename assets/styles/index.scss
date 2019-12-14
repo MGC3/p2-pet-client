@@ -1,5 +1,31 @@
 @import "~bootstrap/scss/bootstrap";
 
+body {
+  background: linear-gradient(to left, #80e0a7, #2bc0c4);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__container {
+  background: linear-gradient(to right, #80e0a7, #2bc0c4);
+  width: 100vw;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+}
+
+.app__container {
+  padding-top: 60px;
+}
+
 .pet-weight-chart__container {
   width: 600px;
   height: 400px;

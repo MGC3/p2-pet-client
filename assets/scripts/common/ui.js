@@ -2,6 +2,8 @@
 const userHome = require("../templates/UserHome.handlebars");
 const landing = require("../templates/Landing.handlebars");
 const toast = require("../templates/Toast.handlebars");
+const navbar = require("../templates/Navbar.handlebars");
+const navbarAuth = require("../templates/NavbarAuth.handlebars");
 
 const init = () => {
   loadLanding();
@@ -23,15 +25,20 @@ const notification = (text, type = null) => {
 
 const getUserHomeSuccess = data => {
   const userHomeHtml = userHome({ pets: data.pets });
+  $(".nav__container").remove();
+  $("body").prepend(navbarAuth);
   $("#app").html(userHomeHtml);
 };
 
 const loadLanding = () => {
+  $(".nav__container").remove();
+  $("body").prepend(navbar);
   $("#app").html(landing);
 };
 
 module.exports = {
   init,
   getUserHomeSuccess,
-  notification
+  notification,
+  loadLanding
 };
