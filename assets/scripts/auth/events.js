@@ -12,7 +12,8 @@ const onSignUp = e => {
 
   api
     .signUp(formData)
-    .then(ui.onSignupSuccess)
+    .then(() => api.signIn(formData))
+    .then(ui.onSigninSuccess)
     .catch(() => ui.onSignupFailure());
 };
 

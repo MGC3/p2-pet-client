@@ -4,11 +4,6 @@ const store = require("../store");
 const commonEvents = require("../common/events");
 const commonUi = require("../common/ui");
 
-const onSignupSuccess = () => {
-  $("form").trigger("reset");
-  commonUi.notification("Successfully created account", "success");
-};
-
 const onSignupFailure = () => {
   $("form").trigger("reset");
   commonUi.notification("Error creating account", "failure");
@@ -16,7 +11,6 @@ const onSignupFailure = () => {
 
 const onSigninSuccess = responseData => {
   store.user = responseData.user;
-  console.log(store);
   commonEvents.onGetUserHome();
 };
 
@@ -47,7 +41,6 @@ const onSignOutFailure = () => {
 };
 
 module.exports = {
-  onSignupSuccess,
   onSignupFailure,
   onSigninSuccess,
   onSigninFailure,

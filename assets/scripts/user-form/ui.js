@@ -8,6 +8,13 @@ const onSignUpLinkClick = () => {
   loadSignUpMD();
 };
 
+const onSignInLinkClick = () => {
+  $("#app").html(signIn);
+  loadSignUpMD();
+};
+
+// instantiate the MD components
+// from https://material.io/develop/web/docs/importing-js/
 const loadSignUpMD = () => {
   const usernames = [].map.call(
     document.querySelectorAll(".mdc-text-field"),
@@ -22,11 +29,6 @@ const loadSignUpMD = () => {
       return new MDCNotchedOutline(el);
     }
   );
-};
-
-const onSignInLinkClick = () => {
-  $("#app").html(signIn);
-  loadSignUpMD();
 };
 
 module.exports = {
