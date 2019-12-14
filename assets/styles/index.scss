@@ -43,6 +43,7 @@ body {
     font-weight: bold;
     font-size: 32px;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
   &__links {
     display: flex;
@@ -80,5 +81,11 @@ a:hover {
 
 .pet-weight-chart__container {
   width: 600px;
+  height: 400px;
+}
+
+.test {
+  margin-left: 100px;
+  width: 500px;
   height: 400px;
 }

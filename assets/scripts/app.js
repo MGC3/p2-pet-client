@@ -4,6 +4,7 @@ const authEvents = require("./auth/events");
 const userEvents = require("./user/events");
 const petFormEvents = require("./pet-form/events");
 const petShowEvents = require("./pet-show/events");
+const userFormEvents = require("./user-form/events");
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -17,4 +18,5 @@ $(() => {
   userEvents.addHandlers();
   petFormEvents.addHandlers();
   petShowEvents.addHandlers();
+  userFormEvents.addHandlers();
 });
