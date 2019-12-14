@@ -5,6 +5,8 @@
 
 $color-white: #ffffff;
 $color-black: #333333;
+$color-green-light: #80e0a7;
+$color-green-dark: #2bc0c4;
 $gradient-green: linear-gradient(to right, #80e0a7, #2bc0c4);
 
 $font-serif: "EB Garamond", serif;
@@ -92,15 +94,15 @@ a:hover {
 
 // -------- FORMS --------
 .form__container {
-  margin-top: 100px;
+  margin-top: 64px;
   display: flex;
   justify-content: center;
 }
 
 .form__card {
-  width: 400px;
-  height: 450px;
-  padding-top: 50px;
+  width: 320px;
+  max-height: 450px;
+  padding: 50px 0;
   border-radius: 10px;
   display: flex;
   flex-direction: column;

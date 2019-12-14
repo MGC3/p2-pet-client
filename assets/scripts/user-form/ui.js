@@ -26,6 +26,7 @@ const loadSignUpMD = () => {
 
 const onSignInLinkClick = () => {
   $("#app").html(signIn);
+  loadSignUpMD();
 };
 
 module.exports = {
