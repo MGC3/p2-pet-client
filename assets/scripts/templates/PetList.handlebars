@@ -1,7 +1,12 @@
-{{#each pets as |pet|}}
-<h1>Pet name is: {{pet.name}}</h1>
-<h1>Pet ID is: {{pet.id}}</h1>
-<button data-id="{{pet.id}}" class='btn btn-primary pet-show__btn'>Go to my {{pet.name}}'s page</button>
-{{else}}
-<h1>Add a pet to get started!</h1>
-{{/each}}
+<div class="pets-grid__container">
+  {{#each pets as |pet|}}
+  <div data-id="{{pet.id}}" class="pets-card__container pet-show__btn">
+    <h1>{{pet.name}}</h1>
+    {{#if pet.weightlogs.0.weight}}
+    <p>Last checkin: {{pet.weightlogs.0.weight}} lbs</h1>
+      {{/if}}
+  </div>
+  {{else}}
+  <h1>Add a pet to get started!</h1>
+  {{/each}}
+</div>

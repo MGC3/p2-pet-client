@@ -6,7 +6,11 @@ const onClickPetFormButton = () => {
 };
 
 const onClickPetShowButton = e => {
-  const id = $(e.target).data("id");
+  // TODO: probably a better way to do this
+  const id = $(e.target)
+    .closest(".pet-show__btn")
+    .data("id");
+
   api
     .getPet(id)
     .then(data => ui.getPetSuccess(data))
