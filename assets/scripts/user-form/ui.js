@@ -9,10 +9,19 @@ const onSignUpLinkClick = () => {
 };
 
 const loadSignUpMD = () => {
-  const notch = new MDCNotchedOutline(
-    document.querySelector(".mdc-notched-outline")
+  const usernames = [].map.call(
+    document.querySelectorAll(".mdc-text-field"),
+    function(el) {
+      return new MDCTextField(el);
+    }
   );
-  const username = new MDCTextField(document.querySelector(".mdc-text-field"));
+
+  const notches = [].map.call(
+    document.querySelectorAll(".mdc-notched-outline"),
+    function(el) {
+      return new MDCNotchedOutline(el);
+    }
+  );
 };
 
 const onSignInLinkClick = () => {

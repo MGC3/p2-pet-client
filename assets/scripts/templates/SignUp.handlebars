@@ -1,33 +1,44 @@
 <div class="app__container">
-  <h2>Sign Up</h2>
-  <form action="" id="sign-up">
-    <div class="mdc-text-field mdc-text-field--outlined">
-      <input class="mdc-text-field__input" id="text-field-hero-input" type="email" name="credentials[email]"
-        placeholder="email">
-      <div class="mdc-notched-outline mdc-notched-outline--no-label">
-        <div class="mdc-notched-outline__leading"></div>
-        <div class="mdc-notched-outline__notch">
-          <label for="text-field-hero-input" class="mdc-floating-label">Test Label</label>
-        </div>
-        <div class="mdc-notched-outline__trailing"></div>
-      </div>
-    </div>
-    {{!-- <input type="email" name="credentials[email]" placeholder="email" /> --}}
-    <input type="password" name="credentials[password]"" placeholder=" password" />
-    <input type="password" name="credentials[password_confirmation]" placeholder="password" />
-    <button class="btn btn-primary">Submit</button>
-  </form>
-
-  <div class="test">
-
-    <div class="mdc-text-field mdc-text-field--outlined">
-      <input class="mdc-text-field__input" id="text-field-hero-input2">
-      <div class="mdc-notched-outline mdc-notched-outline--no-label">
-        <div class="mdc-notched-outline__leading"></div>
-        <div class="mdc-notched-outline__notch">
-          <label for="text-field-hero-input" class="mdc-floating-label">Test Label</label>
-        </div>
-        <div class="mdc-notched-outline__trailing"></div>
+  <div class="form__container">
+    <div class="form__card">
+      <div class="form__contents">
+        <h2 class='form__title'>Sign Up</h2>
+        <form action="" id="sign-up">
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input class="mdc-text-field__input" id="text-field-email-input" type="email" name="credentials[email]"
+              placeholder="email">
+            <div class="mdc-notched-outline mdc-notched-outline--no-label">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="text-field-hero-input" class="mdc-floating-label">Email</label>
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+          </div>
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input class="mdc-text-field__input" id="text-field-pw-input" type="password" name="credentials[password]"
+              placeholder="password">
+            <div class="mdc-notched-outline mdc-notched-outline--no-label">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="text-field-hero-input" class="mdc-floating-label">Password</label>
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+          </div>
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input class="mdc-text-field__input" id="text-field-pw-conf-input" type="password"
+              name="credentials[password_confirmation]" placeholder="password">
+            <div class="mdc-notched-outline mdc-notched-outline--no-label">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="text-field-hero-input" class="mdc-floating-label">Confirm Password</label>
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+          </div>
+          <button class="btn-custom btn-custom__green btn-custom__block">Submit</button>
+        </form>
       </div>
     </div>
   </div>
