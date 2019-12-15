@@ -5,6 +5,7 @@ const petChart = require("../chart/petWeightChart");
 
 const loadPetForm = () => {
   $("#app").html(petForm);
+  commonUi.loadMDForms();
 };
 
 const getPetSuccess = data => {

@@ -4,6 +4,8 @@ const landing = require("../templates/Landing.handlebars");
 const toast = require("../templates/Toast.handlebars");
 const navbar = require("../templates/Navbar.handlebars");
 const navbarAuth = require("../templates/NavbarAuth.handlebars");
+import { MDCTextField } from "@material/textfield";
+import { MDCNotchedOutline } from "@material/notched-outline";
 
 const init = () => {
   loadLanding();
@@ -36,9 +38,28 @@ const loadLanding = () => {
   $("#app").html(landing);
 };
 
+// instantiate the MD components
+// from https://material.io/develop/web/docs/importing-js/
+const loadMDForms = () => {
+  const textFields = [].map.call(
+    document.querySelectorAll(".mdc-text-field"),
+    function(el) {
+      return new MDCTextField(el);
+    }
+  );
+
+  const notches = [].map.call(
+    document.querySelectorAll(".mdc-notched-outline"),
+    function(el) {
+      return new MDCNotchedOutline(el);
+    }
+  );
+};
+
 module.exports = {
   init,
   getUserHomeSuccess,
   notification,
-  loadLanding
+  loadLanding,
+  loadMDForms
 };

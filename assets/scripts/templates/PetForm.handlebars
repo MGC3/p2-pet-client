@@ -1,7 +1,23 @@
-{{> ChangePassword}}
-{{> SignOut}}
-<h1>I am petform</h1>
-<form action="" id="pet-create">
-  <input type="text" name="pet[name]" placeholder="pet name" />
-  <input type="submit" value="Create Pet" />
-</form>
+<div class="app__container">
+  <div class="form__container">
+    <div class="form__card">
+      <div class="form__contents">
+        <h2 class='form__title'>Add a pet</h2>
+        <form action="" id="pet-create">
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input class="mdc-text-field__input" id="text-field-name-input" type="text" name="pet[name]"
+              placeholder="name">
+            <div class="mdc-notched-outline mdc-notched-outline--no-label">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+          </div>
+          <button class="btn-custom btn-custom__green btn-custom__block">Add pet</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
