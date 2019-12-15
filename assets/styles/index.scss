@@ -33,8 +33,20 @@ body {
   padding-top: 120px;
   max-width: 960px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  flex-direction: column;
+}
+.section-title__container {
+  width: 960px;
 }
 
+.section-content__container {
+  display: flex;
+  flex-direction: column;
+}
 // -------- NAV --------
 .nav {
   &__container {
@@ -143,10 +155,6 @@ a:hover {
 }
 
 // -------- USER HOME --------
-.section-title__container {
-  width: 960px;
-}
-
 .pets-grid__container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -176,6 +184,13 @@ a:hover {
   }
 }
 
+// -------- PET SHOW --------
+.pet-show-card__container {
+  padding: 24px;
+  background: $color-white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
 // -------- CHARTS --------
 .pet-weight-chart__container {
   width: 600px;

@@ -1,32 +1,37 @@
-<h1>I am Pet Show Component for PETNAME: {{pet.name}} PETID: {{pet.id}}</h1>
-<button data-id="{{pet.id}}" class="btn btn-danger pet-delete__btn">Delete this pet</button>
-<form data-id="{{pet.id}}" action="" id="update-pet-name">
-  <label for="update-name">Enter new name</label>
-  <input name="pet[name]" id="update-name" type="text" placeholder="Enter new name" />
-  <button class="btn btn-primary">Update name</button>
-</form>
-<div class="pet-weight-chart__container">
-  <canvas id="pet-weight-chart" width="600" height="400"></canvas>
-</div>
+<div class="app__container">
+  <div class="pet-show-card__container">
+    <div>
+      <h1>{{pet.name}}</h1>
+    </div>
+    <button data-id="{{pet.id}}" class="btn btn-danger pet-delete__btn">Delete this pet</button>
+    <form data-id="{{pet.id}}" action="" id="update-pet-name">
+      <label for="update-name">Enter new name</label>
+      <input name="pet[name]" id="update-name" type="text" placeholder="Enter new name" />
+      <button class="btn btn-primary">Update name</button>
+    </form>
+    <div class="pet-weight-chart__container">
+      <canvas id="pet-weight-chart" width="600" height="400"></canvas>
+    </div>
+    <h1>Weight</h1>
+    <form data-id="{{pet.id}}" action="" id="weight-create">
+      <input type="number" min="0.01" step=".01" name="weightlog[amount]" placeholder="weight" required />
+      <input type="date" name="weightlog[date]" required />
+      <input class="btn-custom btn-custom__green" type="submit" value="Create Weightlog" />
+    </form>
+    <div class="weight-list__container">
+      <ul data-pet='{{pet.id}}' class="weight-list">
+        {{#each pet.weightlogs as |weightlog|}}
+        <li>WEIGHT: {{weightlog.weight}} DATE: {{weightlog.date}}<button data-id="{{weightlog.id}}"
+            class="btn btn-danger weight-delete__btn">Delete</button>
+          <form data-id="{{weightlog.id}}" action="" id="update-pet-weight">
+            <input name="weightlog[amount]" type="number" step="0.01" value={{weightlog.weight}} required />
+            <input type="date" name="weightlog[date]" value={{weightlog.date}} required />
+            <button type='submit' class="btn btn-primary">Update</button>
+          </form>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 
-<h1>Weight</h1>
-<form data-id="{{pet.id}}" action="" id="weight-create">
-  <input type="number" min="0.01" step=".01" name="weightlog[amount]" placeholder="weight" required />
-  <input type="date" name="weightlog[date]" required />
-  <input class="btn btn-primary" type="submit" value="Create Weightlog" />
-</form>
-<div class="weight-list__container">
-  <ul data-pet='{{pet.id}}' class="weight-list">
-    {{#each pet.weightlogs as |weightlog|}}
-    <li>WEIGHT: {{weightlog.weight}} DATE: {{weightlog.date}}<button data-id="{{weightlog.id}}"
-        class="btn btn-danger weight-delete__btn">Delete</button>
-      <form data-id="{{weightlog.id}}" action="" id="update-pet-weight">
-        <input name="weightlog[amount]" id="update-weight" type="number" step="0.1" value={{weightlog.weight}}
-          required />
-        <input type="date" name="weightlog[date]" value={{weightlog.date}} required />
-        <button type='submit' class="btn btn-primary">Update</button>
-      </form>
-    </li>
-    {{/each}}
-  </ul>
 </div>
