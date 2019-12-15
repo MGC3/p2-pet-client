@@ -47,6 +47,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.hidden {
+  visibility: hidden;
+}
 // -------- NAV --------
 .nav {
   &__container {

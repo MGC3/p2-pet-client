@@ -26,10 +26,19 @@ const onUpdateWeightSuccess = id => {
   commonEvents.onGetPetShow(id);
 };
 
+const onClickShowUpdate = () => {
+  $("#update-pet-name").removeClass("hidden");
+};
+const onClickHideUpdate = () => {
+  $("#update-pet-name").addClass("hidden");
+};
+
 module.exports = {
   onDeletePetSuccess,
   onUpdatePetNameSuccess,
   onCreateWeightSuccess,
   onDeleteWeightSuccess,
-  onUpdateWeightSuccess
+  onUpdateWeightSuccess,
+  onClickShowUpdate,
+  onClickHideUpdate
 };

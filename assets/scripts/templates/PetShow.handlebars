@@ -2,12 +2,16 @@
   <div class="pet-show-card__container">
     <div>
       <h1>{{pet.name}}</h1>
+      <p class="show-update__btn">
+        I am update button
+      </p>
     </div>
     <button data-id="{{pet.id}}" class="btn btn-danger pet-delete__btn">Delete this pet</button>
-    <form data-id="{{pet.id}}" action="" id="update-pet-name">
+    <form class="hidden" data-id="{{pet.id}}" action="" id="update-pet-name">
       <label for="update-name">Enter new name</label>
       <input name="pet[name]" id="update-name" type="text" placeholder="Enter new name" />
       <button class="btn btn-primary">Update name</button>
+      <button class='btn-custom hide-update__btn'>Cancel</button>
     </form>
     <div class="pet-weight-chart__container">
       <canvas id="pet-weight-chart" width="600" height="400"></canvas>
