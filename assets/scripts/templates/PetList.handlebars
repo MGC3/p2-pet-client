@@ -1,19 +1,16 @@
-<section>
+<div class='section-title__container'>
   <h1> Pets<span>
+      {{#if pets}}
       <button class="btn btn-primary pet-form__btn">Go to new pet form</button>
     </span></h1>
-
-
-</section>
-
+  {{/if}}
+</div>
 <div class="pets-grid__container">
   {{#each pets as |pet|}}
   <div data-id="{{pet.id}}" class="pets-card__container pet-show__btn">
     <h1>{{pet.name}}</h1>
   </div>
   {{else}}
-  <div class="pets-card__container">
-    <button class="btn btn-primary pet-form__btn">Go to new pet form</button>
-  </div>
+  {{> Onboarding }}
   {{/each}}
 </div>

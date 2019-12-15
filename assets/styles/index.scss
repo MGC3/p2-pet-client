@@ -6,6 +6,7 @@
 
 $color-white: #ffffff;
 $color-black: #333333;
+$color-grey: #f1f2f6;
 $color-green-light: #80e0a7;
 $color-green-dark: #2bc0c4;
 $gradient-green: linear-gradient(to right, #80e0a7, #2bc0c4);
@@ -19,7 +20,7 @@ $font-logo: "Pacifico", cursive;
 body {
   margin: 0;
   padding: 0;
-  background: $color-white;
+  background: $color-grey;
   font-family: $font-sans-serif;
 }
 
@@ -142,6 +143,10 @@ a:hover {
 }
 
 // -------- USER HOME --------
+.section-title__container {
+  width: 960px;
+}
+
 .pets-grid__container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -165,6 +170,9 @@ a:hover {
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  &--onboard {
+    border: dashed;
   }
 }
 
