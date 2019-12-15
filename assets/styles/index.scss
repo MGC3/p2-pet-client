@@ -113,6 +113,12 @@ a:hover {
     color: $white;
     font-weight: bold;
   }
+  &__outline {
+    border: $color-green-dark 1px solid;
+    background: $color-white;
+    color: $color-green-dark;
+    font-weight: bold;
+  }
   &__block {
     width: 100%;
     display: block;
