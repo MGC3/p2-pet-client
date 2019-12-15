@@ -8,13 +8,13 @@
     <form class="hidden" data-id="{{pet.id}}" action="" id="update-pet-name">
       <label for="update-name">Enter new name</label>
       <input name="pet[name]" id="update-name" type="text" placeholder="Enter new name" />
-      <button class="btn-custom btn-custom__primary">Update name</button>
+      <button class="btn-custom btn-custom__outline">Update name</button>
       <button class='btn-custom btn-custom__link hide-update__btn'>Cancel</button>
     </form>
     <div class="pet-weight-chart__container">
       <canvas id="pet-weight-chart" width="600" height="400"></canvas>
     </div>
-    <h1>Weight</h1>
+    <h2>Weight</h2>
     <form data-id="{{pet.id}}" action="" id="weight-create">
       <input class='form-control weight-add-input' type="number" min="0.01" step=".01" name="weightlog[amount]"
         placeholder="weight" required />
@@ -35,7 +35,7 @@
           <input class='weight-edit-input' name="weightlog[amount]" type="number" step="0.01" value={{weightlog.weight}}
             required />
           <input class='date-edit-input' type="date" name="weightlog[date]" value={{weightlog.date}} required />
-          <button type='submit' class="btn btn-outline-primary">Update</button>
+          <button type='submit' class="btn-custom btn-custom__outline">Update</button>
           <button class='btn-custom btn-custom__link hide-edit__btn'>Cancel</button>
         </form>
         {{/each}}
