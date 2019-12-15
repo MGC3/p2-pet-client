@@ -35,7 +35,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 .section-title__container {
@@ -45,8 +45,9 @@ body {
 .section-title__row {
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
 }
-.pet-form__btn {
+.pull-right {
   margin-left: 32px;
 }
 .section-content__container {
@@ -196,11 +197,24 @@ a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   &--onboard {
     border: dashed;
+    margin-bottom: 64px;
+    text-align: center;
+  }
+}
+
+// -------- ONBOARD --------
+.onboarding__container {
+  text-align: center;
+  h1 {
+    color: black;
+  }
+  p {
+    color: grey;
   }
 }
 

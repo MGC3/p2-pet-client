@@ -1,5 +1,7 @@
 <div class="app__container">
-  <div class="home__container">
-    {{> PetList }}
-  </div>
+  {{#if pets}}
+  {{> PetList }}
+  {{else}}
+  {{> Onboarding}}
+  {{/if}}
 </div>
