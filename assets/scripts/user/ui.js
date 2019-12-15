@@ -5,7 +5,10 @@ const petChart = require("../chart/petWeightChart");
 const eva = require("eva-icons");
 
 const loadPetForm = () => {
-  $("#app").html(petForm);
+  $("#app")
+    .hide()
+    .html(petForm)
+    .fadeIn(250);
   commonUi.loadMDForms();
 };
 

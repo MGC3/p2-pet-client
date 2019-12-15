@@ -36,13 +36,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   flex-direction: column;
 }
 .section-title__container {
   width: 960px;
 }
 
+.section-title__row {
+  display: flex;
+  align-items: center;
+}
+.pet-form__btn {
+  margin-left: 32px;
+}
 .section-content__container {
   display: flex;
   flex-direction: column;
@@ -102,7 +108,7 @@ a:hover {
   border-radius: 4px;
   padding: 6px 12px;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
-  &__green {
+  &__primary {
     background: $color-green-dark;
     color: $white;
     font-weight: bold;

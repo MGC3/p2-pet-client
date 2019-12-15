@@ -30,14 +30,20 @@ const getUserHomeSuccess = data => {
   const userHomeHtml = userHome({ pets: data.pets });
   $(".nav__container").remove();
   $("body").prepend(navbarAuth);
-  $("#app").html(userHomeHtml);
+  $("#app")
+    .hide()
+    .html(userHomeHtml)
+    .fadeIn(300);
   eva.replace();
 };
 
 const loadLanding = () => {
   $(".nav__container").remove();
   $("body").prepend(navbar);
-  $("#app").html(landing);
+  $("#app")
+    .hide()
+    .html(landing)
+    .fadeIn(250);
 };
 
 // instantiate the MD components

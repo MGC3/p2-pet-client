@@ -31,8 +31,6 @@ const onChangePasswordFailure = () => {
 
 const onSignOutSuccess = () => {
   store.user = {}; // the store no longer knows who we are
-  // TODO: check if need to clear anything else
-  // $("#app").html(landing);
   commonUi.loadLanding();
 };
 

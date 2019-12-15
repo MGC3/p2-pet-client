@@ -4,17 +4,26 @@ const settings = require("../templates/Settings.handlebars");
 const commonUi = require("../common/ui");
 
 const onSignUpLinkClick = () => {
-  $("#app").html(signUp);
+  $("#app")
+    .hide()
+    .html(signUp)
+    .fadeIn(250);
   commonUi.loadMDForms();
 };
 
 const onSignInLinkClick = () => {
-  $("#app").html(signIn);
+  $("#app")
+    .hide()
+    .html(signIn)
+    .fadeIn(250);
   commonUi.loadMDForms();
 };
 
 const onShowSettingsClick = () => {
-  $("#app").html(settings);
+  $("#app")
+    .hide()
+    .html(settings)
+    .fadeIn(250);
   commonUi.loadMDForms();
 };
 
