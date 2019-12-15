@@ -1,12 +1,19 @@
+<section>
+  <h1> Pets<span>
+      <button class="btn btn-primary pet-form__btn">Go to new pet form</button>
+    </span></h1>
+
+
+</section>
+
 <div class="pets-grid__container">
   {{#each pets as |pet|}}
   <div data-id="{{pet.id}}" class="pets-card__container pet-show__btn">
     <h1>{{pet.name}}</h1>
-    {{#if pet.weightlogs.0.weight}}
-    <p>Last checkin: {{pet.weightlogs.0.weight}} lbs</h1>
-      {{/if}}
   </div>
   {{else}}
-  <h1>Add a pet to get started!</h1>
+  <div class="pets-card__container">
+    <button class="btn btn-primary pet-form__btn">Go to new pet form</button>
+  </div>
   {{/each}}
 </div>
