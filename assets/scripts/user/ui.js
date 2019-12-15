@@ -2,6 +2,7 @@ const petForm = require("../templates/PetForm.handlebars");
 const petShow = require("../templates/PetShow.handlebars");
 const commonUi = require("../common/ui");
 const petChart = require("../chart/petWeightChart");
+const eva = require("eva-icons");
 
 const loadPetForm = () => {
   $("#app").html(petForm);
@@ -16,7 +17,7 @@ const getPetSuccess = data => {
   $("#app").html(petShowHtml);
   const weights = data.pet.weightlogs.map(i => i.weight).reverse();
   const dates = data.pet.weightlogs.map(i => i.date).reverse();
-
+  eva.replace();
   petChart.drawChart(weights, dates);
 };
 

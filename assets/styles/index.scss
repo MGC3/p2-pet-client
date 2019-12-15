@@ -111,6 +111,10 @@ a:hover {
     width: 100%;
     display: block;
   }
+  &__link {
+    box-shadow: none;
+    color: blue;
+  }
 }
 
 // -------- FORMS --------
@@ -194,6 +198,15 @@ a:hover {
   background: $color-white;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.pet-show-card__header {
+  display: flex;
+  align-items: center;
+}
+
+.pet-delete__btn {
+  margin-left: auto;
 }
 
 // -------- CHARTS --------

@@ -1,17 +1,15 @@
 <div class="app__container">
   <div class="pet-show-card__container">
-    <div>
+    <div class='pet-show-card__header'>
       <h1>{{pet.name}}</h1>
-      <p class="show-update__btn">
-        I am update button
-      </p>
+      <i class='show-update__btn' data-eva="edit-2-outline"></i>
+      <button data-id="{{pet.id}}" class="btn btn-danger pet-delete__btn">Delete this pet</button>
     </div>
-    <button data-id="{{pet.id}}" class="btn btn-danger pet-delete__btn">Delete this pet</button>
     <form class="hidden" data-id="{{pet.id}}" action="" id="update-pet-name">
       <label for="update-name">Enter new name</label>
       <input name="pet[name]" id="update-name" type="text" placeholder="Enter new name" />
-      <button class="btn btn-primary">Update name</button>
-      <button class='btn-custom hide-update__btn'>Cancel</button>
+      <button class="btn-custom btn-custom__green">Update name</button>
+      <button class='btn-custom btn-custom__link hide-update__btn'>Cancel</button>
     </form>
     <div class="pet-weight-chart__container">
       <canvas id="pet-weight-chart" width="600" height="400"></canvas>
@@ -37,5 +35,4 @@
       </ul>
     </div>
   </div>
-
 </div>
