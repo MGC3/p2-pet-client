@@ -4,6 +4,7 @@ const landing = require("../templates/Landing.handlebars");
 const toast = require("../templates/Toast.handlebars");
 const navbar = require("../templates/Navbar.handlebars");
 const navbarAuth = require("../templates/NavbarAuth.handlebars");
+const eva = require("eva-icons");
 import { MDCTextField } from "@material/textfield";
 import { MDCNotchedOutline } from "@material/notched-outline";
 
@@ -30,6 +31,7 @@ const getUserHomeSuccess = data => {
   $(".nav__container").remove();
   $("body").prepend(navbarAuth);
   $("#app").html(userHomeHtml);
+  eva.replace();
 };
 
 const loadLanding = () => {

@@ -1,5 +1,6 @@
 const signUp = require("../templates/SignUp.handlebars");
 const signIn = require("../templates/SignIn.handlebars");
+const settings = require("../templates/Settings.handlebars");
 const commonUi = require("../common/ui");
 
 const onSignUpLinkClick = () => {
@@ -12,7 +13,13 @@ const onSignInLinkClick = () => {
   commonUi.loadMDForms();
 };
 
+const onShowSettingsClick = () => {
+  $("#app").html(settings);
+  commonUi.loadMDForms();
+};
+
 module.exports = {
   onSignUpLinkClick,
-  onSignInLinkClick
+  onSignInLinkClick,
+  onShowSettingsClick
 };
