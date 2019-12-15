@@ -33,6 +33,18 @@ const onClickHideUpdate = () => {
   $("#update-pet-name").addClass("hidden");
 };
 
+const onClickShowEdit = id => {
+  $(".weight__list")
+    .find(`[data-update='${id}']`)
+    .removeClass("hidden");
+  // $("#update-pet-weight").removeClass("hidden");
+};
+const onClickHideEdit = id => {
+  $(".weight__list")
+    .find(`[data-update='${id}']`)
+    .addClass("hidden");
+};
+
 module.exports = {
   onDeletePetSuccess,
   onUpdatePetNameSuccess,
@@ -40,5 +52,7 @@ module.exports = {
   onDeleteWeightSuccess,
   onUpdateWeightSuccess,
   onClickShowUpdate,
-  onClickHideUpdate
+  onClickHideUpdate,
+  onClickShowEdit,
+  onClickHideEdit
 };

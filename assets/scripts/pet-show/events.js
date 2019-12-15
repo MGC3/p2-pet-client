@@ -42,14 +42,14 @@ const onCreateWeight = e => {
 
 const onDeleteWeight = e => {
   e.preventDefault();
-  const weightlogId = $(e.target).data("id");
-  // TODO: i mean, this works...but
+  const weightlogId = $(e.target)
+    .closest(".weight-row")
+    .data("id");
   const petId = $(e.target)
-    .parent()
-    .parent()
+    .closest(".weight__list")
     .data("pet");
-
   const queryString = `${weightlogId}?pet_id=${petId}`;
+
   api
     .deleteWeight(queryString)
     .then(() => ui.onDeleteWeightSuccess(petId))
@@ -59,12 +59,11 @@ const onDeleteWeight = e => {
 const onUpdatePetWeight = e => {
   e.preventDefault();
   const weightlogId = $(e.target).data("id");
-  const form = e.target;
-  const formData = getFormFields(form);
   const petId = $(e.target)
     .parent()
-    .parent()
     .data("pet");
+  const form = e.target;
+  const formData = getFormFields(form);
   const formDataId = {
     weightlog: {
       weight: formData.weightlog.amount,
@@ -88,6 +87,21 @@ const onHideUpdate = e => {
   ui.onClickHideUpdate();
 };
 
+const onShowEdit = e => {
+  const id = $(e.target)
+    .closest(".weight-row")
+    .data("id");
+  ui.onClickShowEdit(id);
+};
+
+const onHideEdit = e => {
+  e.preventDefault();
+  const id = $(e.target)
+    .parent()
+    .data("id");
+  ui.onClickHideEdit(id);
+};
+
 const addHandlers = () => {
   $("#app").on("click", ".pet-delete__btn", onDeletePet);
   $("#app").on("submit", "#update-pet-name", onUpdatePetName);
@@ -96,6 +110,8 @@ const addHandlers = () => {
   $("#app").on("submit", "#update-pet-weight", onUpdatePetWeight);
   $("#app").on("click", ".show-update__btn", onShowUpdate);
   $("#app").on("click", ".hide-update__btn", onHideUpdate);
+  $("#app").on("click", ".show-edit__btn", onShowEdit);
+  $("#app").on("click", ".hide-edit__btn", onHideEdit);
 };
 
 module.exports = {

@@ -16,23 +16,30 @@
     </div>
     <h1>Weight</h1>
     <form data-id="{{pet.id}}" action="" id="weight-create">
-      <input type="number" min="0.01" step=".01" name="weightlog[amount]" placeholder="weight" required />
-      <input type="date" name="weightlog[date]" required />
-      <input class="btn-custom btn-custom__green" type="submit" value="Create Weightlog" />
+      <input class='form-control weight-add-input' type="number" min="0.01" step=".01" name="weightlog[amount]"
+        placeholder="weight" required />
+      <input class='form-control date-add-input' type="date" name="weightlog[date]" required />
+      <button class="btn-custom btn-custom__green" type="submit">Add weight</button>
     </form>
-    <div class="weight-list__container">
-      <ul data-pet='{{pet.id}}' class="weight-list">
+    <div class="weight__container">
+      <div data-pet='{{pet.id}}' class="weight__list">
         {{#each pet.weightlogs as |weightlog|}}
-        <li>WEIGHT: {{weightlog.weight}} DATE: {{weightlog.date}}<button data-id="{{weightlog.id}}"
-            class="btn btn-danger weight-delete__btn">Delete</button>
-          <form data-id="{{weightlog.id}}" action="" id="update-pet-weight">
-            <input name="weightlog[amount]" type="number" step="0.01" value={{weightlog.weight}} required />
-            <input type="date" name="weightlog[date]" value={{weightlog.date}} required />
-            <button type='submit' class="btn btn-primary">Update</button>
-          </form>
-        </li>
+        <div data-id="{{weightlog.id}}" class='weight-row'>
+          <div>
+            {{weightlog.weight}}lbs {{weightlog.date}}
+          </div>
+          <i class='show-edit__btn' data-eva="edit-2-outline"></i>
+          <i class='weight-delete__btn' data-eva-fill='#dc3545' data-eva="trash-2-outline"></i>
+        </div>
+        <form class='hidden' data-update="{{weightlog.id}}" data-id="{{weightlog.id}}" action="" id="update-pet-weight">
+          <input class='weight-edit-input' name="weightlog[amount]" type="number" step="0.01" value={{weightlog.weight}}
+            required />
+          <input class='date-edit-input' type="date" name="weightlog[date]" value={{weightlog.date}} required />
+          <button type='submit' class="btn btn-primary">Update</button>
+          <button class='btn-custom btn-custom__link hide-edit__btn'>Cancel</button>
+        </form>
         {{/each}}
-      </ul>
+      </div>
     </div>
   </div>
 </div>

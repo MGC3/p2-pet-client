@@ -30,7 +30,7 @@ body {
 }
 
 .app__container {
-  padding-top: 120px;
+  padding: 120px 0;
   max-width: 960px;
   margin: 0 auto;
   display: flex;
@@ -207,6 +207,50 @@ a:hover {
 
 .pet-delete__btn {
   margin-left: auto;
+}
+
+.weight__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.weight-add-input {
+  width: 120px;
+  display: inline-block;
+}
+
+.weight-edit-input {
+  width: 120px;
+  border-radius: 0.25rem;
+}
+
+.date-add-input {
+  width: 200px;
+  display: inline-block;
+}
+
+.date-edit-input {
+  width: 200px;
+  border-radius: 0.25rem;
+}
+
+.show-update__btn {
+  cursor: pointer;
+}
+
+.show-edit__btn {
+  margin-left: auto;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.weight-delete__btn {
+  cursor: pointer;
+}
+
+.weight-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // -------- CHARTS --------
