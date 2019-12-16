@@ -67,16 +67,28 @@ body {
   align-items: center;
 }
 
-.first {
+.landing-hero__container {
   background: linear-gradient(to bottom, $color-green-dark, $color-green-light);
   width: 100%;
   height: 100vh;
 }
 
-.second {
+.wave-container {
+  position: relative;
+  background: $color-white;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+}
+
+.wave-container > svg {
+  display: block;
+}
+
+.landing-features__container {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, $color-green-light, $color-white);
+  background: $color-white;
 }
 // -------- NAV --------
 .nav {
