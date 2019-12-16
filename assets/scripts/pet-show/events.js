@@ -107,7 +107,7 @@ const addHandlers = () => {
   $("#app").on("submit", "#update-pet-name", onUpdatePetName);
   $("#app").on("submit", "#weight-create", onCreateWeight);
   $("#app").on("click", ".weight-delete__btn", onDeleteWeight);
-  $("#app").on("submit", "#update-pet-weight", onUpdatePetWeight);
+  $("#app").on("submit", ".update-pet-weight", onUpdatePetWeight);
   $("#app").on("click", ".show-update__btn", onShowUpdate);
   $("#app").on("click", ".hide-update__btn", onHideUpdate);
   $("#app").on("click", ".show-edit__btn", onShowEdit);
