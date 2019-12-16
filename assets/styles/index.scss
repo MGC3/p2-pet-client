@@ -58,6 +58,26 @@ body {
 .hidden {
   visibility: hidden;
 }
+
+// -------- LANDING --------
+.landing__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first {
+  background: linear-gradient(to bottom, $color-green-dark, $color-green-light);
+  width: 100%;
+  height: 100vh;
+}
+
+.second {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, $color-green-light, $color-white);
+}
 // -------- NAV --------
 .nav {
   &__container {

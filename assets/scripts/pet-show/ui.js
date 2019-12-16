@@ -37,7 +37,6 @@ const onClickShowEdit = id => {
   $(".weight__list")
     .find(`[data-update='${id}']`)
     .removeClass("hidden");
-  // $("#update-pet-weight").removeClass("hidden");
 };
 const onClickHideEdit = id => {
   $(".weight__list")
