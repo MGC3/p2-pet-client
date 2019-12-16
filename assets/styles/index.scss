@@ -108,8 +108,12 @@ body {
   width: 300px;
   height: 200px;
   border: dashed;
+  text-align: left;
 }
 
+.feature-icon {
+  margin-bottom: 16px;
+}
 // attrib to this guide for how to get wave svg on page: https://blog.prototypr.io/how-to-add-svg-waves-to-your-next-web-project-b720efe1c692
 // wave svg generated from https://getwaves.io/
 .wave-container {

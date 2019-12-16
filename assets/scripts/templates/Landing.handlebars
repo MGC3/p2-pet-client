@@ -1,20 +1,26 @@
 <div class='landing__container'>
   <div class="landing-hero__container">
     <div class="hero-grid__container">
-      <div class="test"></div>
-      <div class="test2"></div>
+      <div class="test">
+      </div>
+      <div class="test2">
+        <h1>Header Text</h1>
+        <p> Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of
+          cheesy New Year's costume? Why would a robot need to drink? </p>
+      </div>
     </div>
   </div>
   {{> Wave}}
   <div class="landing-features__container">
     <h1>Here's a list of features</h1>
     <div class="features-grid__container">
-      <div class="test3"></div>
-      <div class="test3"></div>
-      <div class="test3"></div>
-      <div class="test3"></div>
-      <div class="test3"></div>
-      <div class="test3"></div>
+      {{#each features as |feature|}}
+      <div class="test3">
+        <i class='feature-icon' data-eva={{feature.icon}}></i>
+        <h3>{{feature.title}}</h3>
+        <p>{{feature.text}}</p>
+      </div>
+      {{/each}}
     </div>
   </div>
 </div>
