@@ -14,14 +14,22 @@ const loadPetForm = () => {
 
 const getPetSuccess = data => {
   // attrib sort code from: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
-  // sort by newest date at top
+  // sort weightlogs by newest date at top
   data.pet.weightlogs.sort((a, b) => (a.date < b.date ? 1 : -1));
+
+  // render the page
   const petShowHtml = petShow({ pet: data.pet });
   $("#app").html(petShowHtml);
+
+  // get data for chart.js
   const weights = data.pet.weightlogs.map(i => i.weight).reverse();
   const dates = data.pet.weightlogs.map(i => i.date).reverse();
+  // only run the drawChart function when weightlog array is not empty, to avoid chart.js errors
+  if (weights && weights.length) {
+    petChart.drawChart(weights, dates);
+  }
+  // render eva-icons into svg
   eva.replace();
-  petChart.drawChart(weights, dates);
 };
 
 const getPetFailure = () => {

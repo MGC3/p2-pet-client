@@ -11,9 +11,11 @@
       <button class="btn-custom btn-custom__outline">Update name</button>
       <button class='btn-custom btn-custom__link hide-update__btn'>Cancel</button>
     </form>
-    <div class="pet-weight-chart__container">
-      <canvas id="pet-weight-chart" width="600" height="400"></canvas>
-    </div>
+    {{#if pet.weightlogs}}
+    {{> WeightChart}}
+    {{else}}
+    {{> PetShowEmpty}}
+    {{/if}}
     <h2>Weight</h2>
     <form data-id="{{pet.id}}" action="" id="weight-create">
       <input class='form-control weight-add-input' type="number" min="0.01" step=".01" name="weightlog[amount]"
