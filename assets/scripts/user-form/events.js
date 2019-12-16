@@ -22,12 +22,17 @@ const onShowSettings = () => {
   ui.onShowSettingsClick();
 };
 
+const onBackButton = () => {
+  commonEvents.onGetUserHome();
+};
+
 const addHandlers = () => {
   $("body").on("click", "#sign-up-link", onSignUpLink);
   $("body").on("click", "#sign-in-link", onSignInLink);
   $("body").on("click", "#logo-landing", onLogoLanding);
   $("body").on("click", "#logo-auth", onLogoAuth);
   $("body").on("click", ".show-settings__btn", onShowSettings);
+  $("#app").on("click", "#back-btn", onBackButton);
 };
 
 module.exports = {

@@ -10,6 +10,7 @@ const loadPetForm = () => {
     .html(petForm)
     .fadeIn(250);
   commonUi.loadMDForms();
+  eva.replace();
 };
 
 const getPetSuccess = data => {
