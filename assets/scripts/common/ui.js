@@ -56,24 +56,6 @@ const loadLanding = () => {
       title: "Test title",
       text:
         "Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of "
-    },
-    {
-      icon: "bar-chart-2-outline",
-      title: "Test title",
-      text:
-        "Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of "
-    },
-    {
-      icon: "bar-chart-2-outline",
-      title: "Test title",
-      text:
-        "Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of "
-    },
-    {
-      icon: "bar-chart-2-outline",
-      title: "Test title",
-      text:
-        "Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of "
     }
   ];
   const landingHtml = landing({ features: features });

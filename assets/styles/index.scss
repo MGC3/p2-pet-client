@@ -89,25 +89,21 @@ body {
   margin: 0 auto;
   justify-content: center;
   width: 960px;
-  border: dashed red;
 }
 
 .test {
   width: 300px;
   height: 300px;
-  border: dashed;
 }
 
 .test2 {
   width: 400px;
   height: 300px;
-  border: dashed;
 }
 
 .test3 {
-  width: 300px;
+  width: 288px;
   height: 200px;
-  border: dashed;
   text-align: left;
 }
 
@@ -130,7 +126,7 @@ body {
 
 .landing-features__container {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background: $color-white;
   text-align: center;
 }
@@ -141,10 +137,17 @@ body {
   grid-template-rows: auto auto auto;
   grid-column-gap: 32px;
   grid-row-gap: 32px;
-  margin: 0 auto;
   justify-content: center;
+  padding-top: 64px;
+  margin: 0 auto;
   width: 960px;
-  border: dashed red;
+}
+
+.landing-closing__container {
+  width: 100%;
+  height: 20vh;
+  background: $color-white;
+  text-align: center;
 }
 // -------- NAV --------
 .nav {
