@@ -1,24 +1,26 @@
 <div class='landing__container'>
   <div class="landing-hero__container">
     <div class="hero-grid__container">
-      <div class="test">
+      <div class="hero__image">
+        <img class='img-hero' src="public/pale-logged-out.png"
+          alt='A pet struggling to get through a door flap. Image sourced from https://icons8.com'>
       </div>
-      <div class="test2">
-        <h1>Header Text</h1>
-        <p> Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of
-          cheesy New Year's costume? Why would a robot need to drink? </p>
+      <div class="hero__text">
+        <h1>The Easiest Way to Track Your Pet's Weight</h1>
+        <p> Help your pet stay healthy and happy by ensuring your fluffy friend stays within their optimal weight range.
+        </p>
         {{> CreateAccountButton}}
       </div>
     </div>
   </div>
   {{> Wave}}
-  <div class="landing-features__container">
-    <h1>Here's a list of features</h1>
+  <div class="features__container">
+    <h1>Feature list</h1>
     <div class="features-grid__container">
       {{#each features as |feature|}}
-      <div class="test3">
+      <div class="feature-card__container">
         <i class='feature-icon' data-eva={{feature.icon}}></i>
-        <h3>{{feature.title}}</h3>
+        <h4>{{feature.title}}</h4>
         <p>{{feature.text}}</p>
       </div>
       {{/each}}

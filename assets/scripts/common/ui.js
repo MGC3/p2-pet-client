@@ -5,6 +5,7 @@ const toast = require("../templates/Toast.handlebars");
 const navbar = require("../templates/Navbar.handlebars");
 const navbarAuth = require("../templates/NavbarAuth.handlebars");
 const eva = require("eva-icons");
+const features = require("../../data/features");
 import { MDCTextField } from "@material/textfield";
 import { MDCNotchedOutline } from "@material/notched-outline";
 
@@ -38,26 +39,6 @@ const getUserHomeSuccess = data => {
 };
 
 const loadLanding = () => {
-  const features = [
-    {
-      icon: "bar-chart-2-outline",
-      title: "Test title",
-      text:
-        "Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of "
-    },
-    {
-      icon: "bar-chart-2-outline",
-      title: "Test title",
-      text:
-        "Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of "
-    },
-    {
-      icon: "bar-chart-2-outline",
-      title: "Test title",
-      text:
-        "Isn't it true that you have been paid for your testimony? Whoa a real live robot; or is that some kind of "
-    }
-  ];
   const landingHtml = landing({ features: features });
   $(".nav__container").remove();
   $("body").prepend(navbar);

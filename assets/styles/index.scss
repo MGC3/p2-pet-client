@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css?family=Duru+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,600,700&display=swap");
 @import "@material/textfield/mdc-text-field.scss";
@@ -81,6 +82,27 @@ body {
   padding-top: 120px;
 }
 
+.img-hero {
+  width: 320px;
+}
+
+.hero__image {
+  width: 300px;
+  height: 300px;
+}
+
+.hero__text {
+  width: 400px;
+  height: 300px;
+  margin-left: 64px;
+  font-family: "Poppins", sans-serif;
+  color: $color-white;
+}
+
+.hero__text #sign-up-link {
+  font-family: $font-sans-serif;
+}
+
 .hero-grid__container {
   display: grid;
   grid-template-columns: auto auto;
@@ -90,22 +112,6 @@ body {
   margin: 0 auto;
   justify-content: center;
   width: 960px;
-}
-
-.test {
-  width: 300px;
-  height: 300px;
-}
-
-.test2 {
-  width: 400px;
-  height: 300px;
-}
-
-.test3 {
-  width: 288px;
-  height: 200px;
-  text-align: left;
 }
 
 .feature-icon {
@@ -125,11 +131,17 @@ body {
   display: block;
 }
 
-.landing-features__container {
+.features__container {
   width: 100%;
   height: 60vh;
   background: $color-white;
   text-align: center;
+}
+
+.feature-card__container {
+  width: 288px;
+  height: 200px;
+  text-align: left;
 }
 
 .features-grid__container {
