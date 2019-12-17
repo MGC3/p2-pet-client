@@ -14,7 +14,6 @@ const onGetUserHome = () => {
 };
 
 const onGetPetShow = id => {
-  // TODO: this is a workaround, make own method in the future if we want a custom error
   userApi
     .getPet(id)
     .then(data => userUi.getPetSuccess(data))

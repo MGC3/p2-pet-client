@@ -3,7 +3,6 @@ const store = require("../store");
 
 const getUserHome = () => {
   return $.ajax({
-    // TODO: check to make sure this doesn't return all pets...just users
     url: config.apiUrl + "/pets",
     method: "GET",
     headers: {

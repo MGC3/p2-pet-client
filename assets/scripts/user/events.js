@@ -6,7 +6,6 @@ const onClickPetFormButton = () => {
 };
 
 const onClickPetShowButton = e => {
-  // TODO: probably a better way to do this
   const id = $(e.target)
     .closest(".pet-show__btn")
     .data("id");
