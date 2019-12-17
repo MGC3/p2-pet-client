@@ -9,7 +9,7 @@
 <div class="pets-grid__container">
   {{#each pets as |pet|}}
   <div data-id="{{pet.id}}" class="pets-card__container pet-show__btn">
-    <h2>{{pet.name}}</h2>
+    <h2>{{limit pet.name 25}}</h2>
   </div>
   {{else}}
   {{> Onboarding }}
