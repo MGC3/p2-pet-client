@@ -78,4 +78,3 @@ Some examples of user stories:
 - As a pet owner, I want to be able to track my pets weight over time.
 - As a pet owner, I want to be able to add multiple pets.
 - As a user, I want to be able to easily visualize my pets progress on a chart.
-- As a user, I want to be able to add pets even though I haven't named them yet (super special bonus feature).
