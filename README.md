@@ -43,6 +43,8 @@ My problem solving strategy for most things involved relying heavily on the Chro
 
 ### If I had more time...
 
+Some known issues that I'd really like to fix as priority would be making the app responsive (I put this off early on and always thought I'd get the chance to come back to it, but never did) and adding a confirmation dialog before destructive actions.
+
 One feature I would have liked to implement if I had more time would be to allow users to set a target weight and goal and have a "burn down chart" style option to help encourage goal progression. Another feature I was interested in was the ability to optionally store other data such as meals, calories, notes, etc. and see if that would make the app more useful.
 
 ### Wireframes and User Stories
