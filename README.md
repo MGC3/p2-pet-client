@@ -6,7 +6,7 @@
 
 Petlee is a weight tracking app for pets. Users sign up and add the pets they want to track and then begin adding weight entries. As users add entries, they can see an auto-generated chart to help track their progress.
 
-The backend for this app lives can be found in the following repo: [p2-pet-server](https://github.com/MGC3/p2-pet-server)
+The backend for this app can be found in the following repo: [p2-pet-server](https://github.com/MGC3/p2-pet-server)
 
 ### Technologies used
 
