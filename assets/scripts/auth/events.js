@@ -29,6 +29,15 @@ const onSignIn = e => {
     .catch(() => ui.onSigninFailure());
 };
 
+const onDemoSignIn = e => {
+  e.preventDefault();
+
+  api
+    .demoSignIn()
+    .then(ui.onSigninSuccess)
+    .catch(() => ui.onSigninFailure());
+};
+
 const onChangePassword = e => {
   e.preventDefault();
 
@@ -54,6 +63,7 @@ const addHandlers = e => {
   $("body").on("submit", "#sign-in", onSignIn);
   $("body").on("submit", "#change-password", onChangePassword);
   $("body").on("submit", "#sign-out", onSignOut);
+  $("body").on("click", "#demo-login", onDemoSignIn);
 };
 
 module.exports = {

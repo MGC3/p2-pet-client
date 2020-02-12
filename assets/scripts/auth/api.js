@@ -19,6 +19,19 @@ const signIn = formData => {
   });
 };
 
+const demoSignIn = () => {
+  return $.ajax({
+    url: config.apiUrl + "/sign-in",
+    method: "POST",
+    data: {
+      credentials: {
+        email: "demo@demo",
+        password: "demo"
+      }
+    }
+  });
+};
+
 const changePassword = formData => {
   return $.ajax({
     url: config.apiUrl + "/change-password",
@@ -44,5 +57,6 @@ module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  demoSignIn
 };
