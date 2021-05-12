@@ -10,7 +10,7 @@
     "@material/textfield": "^4.0.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "eva-icons": "^1.1.2",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"
